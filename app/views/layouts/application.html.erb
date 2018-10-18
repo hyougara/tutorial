@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tutorial</title>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
-    <%= link_to 'user list', users_path %>
+    <%= link_to 'User list', users_path %>
     <%= link_to 'New User', new_user_path %>
-    <%= link_to 'micropost list', microposts_path %>
+    <%= link_to 'Micropost list', microposts_path %>
     <%= link_to 'New Micropost', new_micropost_path %>
+    <%= link_to 'Home', static_pages_home_path %>
+    <%= link_to 'Help', static_pages_help_path %>
+    <%= link_to "About" , static_pages_about_path %>
+    <%= link_to "Contact" , static_pages_contact_path %>
 
   </body>
 </html>
